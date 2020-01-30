@@ -1,0 +1,511 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap')
+
+
+/* Variables */
+$mont: 'Montserrat', sans-serif
+
+
+/* Colors */
+$main-blue: #1F7FD8
+$title-grad: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(24,24,24,1) 35%, rgba(68,68,68,1) 100%)
+$white-grad: linear-gradient(0deg, rgba(170,170,170,1) 0%, rgba(207,207,207,1) 35%, rgba(255,255,255,1) 100%)
+
+/* Media breaking points */
+$mobile-landscape: 480px
+$tablet-portrait: 768px
+$tablet-landscape: 1024px
+$laptop: 1200px
+
+
+body, html, ::after, ::before
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    text-align: center
+    font-family: $mont
+    text-align: center
+    scroll-behavior: smooth
+
+header
+    width: 100%
+    height: 60px
+    background-color: black
+    z-index: 5
+    nav
+        padding: 0px 10px
+        display: grid
+        grid-template-columns: 50px auto 20%
+        height: 100%
+        .nav-logo
+            width: 35px
+            height: 35px
+            justify-self: right
+            align-self: center
+            border-radius: 50%
+            background-image: url('../assets/logo.jpg')
+            background-size: cover
+        .logo-text
+            display: flex
+            align-self: center
+            justify-self: left
+            padding-left: 5px
+            flex-direction: column
+            .logo-title
+                color: $main-blue
+                text-transform: uppercase
+                font-weight: bold
+                align-self: center
+                font-size: 18px
+            .logo-paragraph
+                color: white
+                font-size: 10px
+                text-transform: uppercase
+                letter-spacing: .2rem
+                width: 115px
+                padding: 0
+                margin: 0
+                align-self: center
+        .nav-burger
+            display: flex
+            flex-direction: column
+            align-self: center
+            justify-self: right
+            margin-right: 10px
+            cursor: pointer
+            align-items: flex-end
+            justify-content: center
+            width: 50px
+            height: 50px
+            .long-line
+                width: 30px
+                height: 3px
+                background-color: white
+                margin-bottom: 5px
+            .middle-line
+                height: 3px
+                width: 25px
+                background-color: white
+                margin-bottom: 5px
+            .short-line
+                height: 3px
+                width: 20px
+                background-color: white
+    .aside
+        position: absolute
+        display: none
+        width: 200px
+        height: auto
+        z-index: 3
+        right: 0
+        top: 60px
+        background-color: $main-blue
+        border-bottom-left-radius: 10px
+        box-shadow: 0px 0px 10px rgba(0,0,0,1)
+        ul
+            align-self: center
+            width: 100%
+            display: flex
+            flex-direction: column
+            padding: 0
+            li
+                list-style: none
+                height: 60px
+                display: flex
+                a
+                    text-decoration: none
+                    color: white
+                    text-transform: uppercase
+                    align-self: center
+                    width: 100%
+                    font-weight: bold
+                    font-size: 14px
+
+
+.fade-nav-intro
+    position: relative
+    z-index: 4
+    height: 30px
+    width: 100%
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%)
+
+main
+    transform: translateY(-30px)
+    z-index: 0
+
+.intro-bg
+    z-index: 2
+    position: relative
+    clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0)
+    width: 100%
+    height: 300px
+    background-image: url('../assets/action-adult-athlete-259984.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+
+.intro-text
+    transform: translateY(-40px)
+    z-index: 1
+    color: white
+    background-color: black
+    padding: 100px 40px
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%)
+    h1
+        font-weight: normal
+        margin-bottom: 40px
+    p
+        font-size: 14px
+
+
+.services
+    padding: 50px 0
+    .card
+        display: flex
+        flex-direction: column
+        height: 250px
+        background-size: cover
+        margin-bottom: 100px
+        background-repeat: no-repeat
+        .card-title
+            height: 25px
+            color: $main-blue
+            font-size: 18px
+            font-weight: bold
+            padding: 7px 0
+            width: 70%
+            margin: auto
+            clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)
+            background: $title-grad
+            margin-top: -18px
+            box-shadow: 0px 0px 10px rgba(0,0,0,.7)
+    .plasma
+        background-image: url('../assets/plasma.jpg')
+    .welding
+        background-image: url('../assets/action-adult-athlete-259984.jpg')
+    .d3
+        background-image: url('../assets/3d.jpg')
+    .fabrication
+        background-image: url('../assets/welding.jpg')
+
+
+.service-button
+    position: relative
+    width: 100px
+    height: 35px
+    background: $white-grad
+    color: $main-blue
+    font-weight: bold
+    border-radius: 35px
+    display: flex
+    justify-content: center
+    align-items: center
+    align-self: center
+    margin-bottom: 30px
+    box-shadow: 0px 0px 10px rgba(0,0,0,1)
+    cursor: pointer
+    z-index: 5
+
+
+.about-us
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%)
+    background-color: black
+    display: flex
+    flex-direction: column
+    padding: 150px 0
+    margin-top: -50px
+    .about-logo
+        justify-self: center
+        align-self: center
+        width: 200px
+        height: 200px
+        border-radius: 50%
+        background-image: url('../assets/logo.jpg')
+        background-size: cover
+        background-position-y: 2px
+        background-position-x: 2px
+    .about-logo-text
+        color: white
+        padding-top: 20px
+        .about-title
+            color: $main-blue
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 26px
+        .about-paragraph
+            color: white
+            font-size: 16px
+            text-transform: uppercase
+            letter-spacing: 5px
+    .about-text
+        color: white
+        padding: 0 40px
+        font-size: 14px
+        padding-top: 80px
+        text-align: center
+
+.contact
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+    background-color: white
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%)
+    padding: 50px 0
+    .contact-name
+        text-transform: uppercase
+        font-size: 26px
+        margin-bottom: 30px
+    .contact-mail
+        display: flex
+        align-self: center
+        img
+            margin-right: 10px
+            width: 20px
+    .contact-phone
+        display: flex
+        align-self: center
+        img
+            margin-right: 10px
+            width: 20px
+    .contact-address
+        margin-top: 20px
+        display: flex
+        flex-direction: column
+        img
+            margin-bottom: 10px
+            width: 20px
+            align-self: center
+
+
+footer
+    display: grid
+    grid-template-areas: "s s s n n n" "s s s n n n" "s s s n n n" "c c c c c c" 
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%)
+    background-color: black
+    color: white
+    padding-top: 100px
+    .footer-social-media
+        grid-area: s
+        align-self: center
+        justify-self: flex-start
+        margin-left: 25%
+        img
+            height: 40px
+            width: 40px
+            padding-right: 10px
+    .footer-navigation
+        grid-area: n
+        justify-self: flex-end
+        margin-right: 25%
+        ul
+            padding: 0
+            li
+                list-style: none
+                text-align: right
+                line-height: 35px
+                a
+                    text-decoration: none
+                    color: white
+                    font-weight: bold
+                    font-size: 14px
+    .footer-copyright
+        grid-area: c
+        font-size: 12px
+
+
+@media only screen and (min-width: $mobile-landscape)
+    .intro-bg
+        background-position-x: 0
+        height: 400px
+
+    .intro-text
+        padding: 100px 100px
+
+    .services
+        width: 80%
+        display: flex
+        flex-direction: column
+        margin: auto
+        .card
+            height: 300px
+            .card-title
+                width: 50%
+                margin: auto
+                background: $title-grad
+                margin-top: -20px
+                box-shadow: 0px 0px 10px rgba(0,0,0,.7)
+        .plasma
+            margin-bottom: 100px
+            border-radius: 10px
+            box-shadow: 0px 0px 10px rgba(0,0,0,.7)
+        .welding
+            margin-bottom: 100px
+            border-radius: 10px
+            box-shadow: 0px 0px 10px rgba(0,0,0,.7)
+        .d3
+            margin-bottom: 100px
+            border-radius: 10px
+            box-shadow: 0px 0px 10px rgba(0,0,0,.7)
+        .fabrication
+            border-radius: 10px
+            box-shadow: 0px 0px 10px rgba(0,0,0,.7)
+
+    .about-us
+        .about-text
+            width: 40%
+            margin: 0 auto
+
+
+
+
+
+@media only screen and (min-width: $tablet-portrait)
+    header
+        height: 80px !important
+        nav
+            grid-template-columns: 80px auto 20% !important
+            .nav-logo
+                width: 50px
+                height: 50px
+            .logo-text
+                .logo-title
+                    font-size: 22px
+                .logo-paragraph
+                    width: 145px
+                    font-size: 14px
+            .nav-burger
+                margin-right: 20px
+
+    .aside
+        top: 80px !important
+
+    .intro-bg
+        height: 500px !important
+
+    .intro-text
+        transform: translateY(-70px)
+        padding: 150px 120px
+        p
+            font-size: 16px
+
+    .services
+        width: 70%
+
+    .about-us
+        .about-text
+            font-size: 16px
+
+
+
+
+@media only screen and (min-width: $tablet-landscape)
+    .aside
+        width: 40% !important
+        left: 50%
+        transform: translate(-50%, 0)
+        border-bottom-right-radius: 10px
+        padding: 0
+        margin: 0
+        height: 80px !important
+        ul
+            flex-direction: row !important
+            padding: 0
+            margin: 0 auto
+            li
+                margin: 0 auto
+                a
+                    text-align: center
+                    padding: 5px 10px
+                    border-radius: 5px
+                    transition: all .3s ease
+                    &:hover
+                        background-color: white
+                        color: $main-blue
+                        box-shadow: 0px 0px 10px rgba(0,0,0,.5)
+                        transition: all .3s ease
+
+
+    .intro
+        display: grid
+        grid-template-columns: 50% 50%
+        margin-bottom: 80px
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%)
+        .intro-bg
+            height: 100%
+            clip-path: none
+            background-position-x: -100px
+        .intro-text
+            clip-path: none
+            margin: 0
+            padding: 50px 80px
+            transform: none
+
+        
+
+    .services
+        margin: 0 auto !important
+        padding: 0
+        padding-bottom: 100px
+        display: grid !important
+        grid-template-columns: 50% 50%
+        width: 90%
+        .card
+            padding: 0
+            margin: 50px
+
+
+    .about-us
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 1fr 1fr
+        margin: 0 !important
+        padding: 0
+        padding-top: 130px
+        .about-logo
+            padding: 0
+            margin: 0
+            grid-column: 1/2
+            grid-row: 1/2
+        .about-logo-text
+            padding: 0
+            margin: 0
+            grid-column: 1/2
+            grid-row: 2/3
+        .about-text
+            width: 70%
+            padding: 0
+            margin: 0 auto
+            grid-column: 2/3
+            grid-row: 1/3
+
+
+
+@media only screen and (min-width: $laptop)
+    .intro-bg
+        background-position-x: 0 !important
+
+    footer
+        padding: 0
+        margin: 0
+        .footer-social-media
+            margin-top: 100px
+        .footer-navigation
+            margin-top: 50px
+        .footer-copyright
+
+
+
+
+@keyframes ham-anim
+    0%
+        width: 30px
+    20%
+        width: 15px
+    40%
+        width: 0px
+    60%
+        width: 15px
+    80%
+        width: 25px
+    90%
+        width: 30px
